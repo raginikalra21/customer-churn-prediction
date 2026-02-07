@@ -4,11 +4,13 @@ This project goes beyond a basic ML prototype by combining:
 Calibrated ML probabilities
 Business risk rules
 Enterprise-grade UI
+
 🚀 Project Overview
 Customer churn directly impacts revenue in subscription businesses.
 This project builds a classification-based churn prediction system that helps businesses identify high-risk customers early and take proactive retention actions.
 The solution follows a real industry workflow:
 EDA → Feature Engineering → Model Training → Evaluation → Business Logic → Deployment
+
 🎯 Objectives
 Predict whether a customer is likely to churn
 Prioritize Recall & ROC-AUC for churn detection
@@ -40,6 +42,7 @@ Handling class imbalance
 Average monthly charge
 High-tenure indicator
 Contract & service indicators
+
 🤖 Models Trained
 Model	Purpose
 Logistic Regression	Baseline
@@ -60,6 +63,7 @@ In churn prediction, missing a churned customer is more costly than a false alar
 The model outputs calibrated churn probabilities, which are intentionally conservative.
 A churn probability of 15–25% is already significant
 Production systems rarely act on raw probabilities alone
+
 🧩 Business Risk Layer (Key Innovation)
 To make predictions actionable, a business decision layer is added on top of the ML model.
 Business Risk Factors
@@ -72,6 +76,7 @@ High price sensitivity
 Final Decision Logic
 Final Risk Score = Model Probability + Business Risk Adjustments
 This mirrors how real companies deploy churn models.
+
 🖥 Streamlit Dashboard (Enterprise-Style)
 The project includes a production-ready Streamlit app:
 Features
@@ -118,6 +123,7 @@ Monthly Charges: High
 Tech Support: No
 Online Security: No
 ➡️ High churn risk flagged with actionable recommendations
+
 📌 Key Learnings
 Churn is driven more by behavior & service experience than price alone
 Calibrated ML models need a business decision layer
@@ -128,9 +134,11 @@ SHAP-based explainability
 Customer-level churn explanations
 Automated retention strategy recommendations
 Cloud deployment (Streamlit Cloud / AWS)
+
 🏁 Final Note
 This project is built to reflect real-world ML systems, not just academic prototypes.
 “Model probability + business logic = production-grade decision system.”
+
 👤 Author
 Ragini Kalra
 Machine Learning & Data Analytics Project
