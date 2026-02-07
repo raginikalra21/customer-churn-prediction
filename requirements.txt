@@ -6,3 +6,7 @@ scikit-learn
 jupyter
 imbalanced-learn
 xgboost
+streamlit
+joblib
+
+
