@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 📊 Customer Churn Prediction – Churn Intelligence Platform
 An end-to-end machine learning project that predicts customer churn in subscription-based digital services and converts model outputs into business-ready churn risk decisions using a production-style Streamlit dashboard.
 This project goes beyond a basic ML prototype by combining:
@@ -16,17 +17,13 @@ Predict whether a customer is likely to churn
 Prioritize Recall & ROC-AUC for churn detection
 Translate ML outputs into actionable business risk
 Deploy a company-ready dashboard, not just a notebook
+=======
+# Customer Churn Prediction – ML + Business Intelligence
+>>>>>>> fe6bcbc (Update README with concise project overview and business context)
 
-🗂 Dataset
-Source: Telco Customer Churn Dataset
-Rows: ~7,000 customers
-Target Variable: Churn (Yes / No)
-Feature Categories
-Customer tenure & contract details
-Billing & payment information
-Internet & service subscriptions
-Support & security services
+This project focuses on predicting customer churn for subscription-based digital services using machine learning and converting predictions into business-ready decisions via an interactive Streamlit dashboard.
 
+<<<<<<< HEAD
 🧠 Methodology
 1️⃣ Exploratory Data Analysis (EDA)
 Churn distribution analysis
@@ -48,17 +45,13 @@ Model	Purpose
 Logistic Regression	Baseline
 Random Forest	Non-linear patterns
 XGBoost	Final production model
+=======
+Instead of stopping at model accuracy, the project emphasizes how churn models are actually used in companies — by combining ML probabilities with business rules to support retention strategies.
+>>>>>>> fe6bcbc (Update README with concise project overview and business context)
 
-📊 Model Evaluation
-Key metrics used:
-Accuracy
-Precision
-Recall (priority metric)
-F1-Score
-ROC-AUC
-Confusion Matrix
-In churn prediction, missing a churned customer is more costly than a false alarm, hence Recall is emphasized.
+---
 
+<<<<<<< HEAD
 🧠 Why Probabilities Look “Low”
 The model outputs calibrated churn probabilities, which are intentionally conservative.
 A churn probability of 15–25% is already significant
@@ -85,23 +78,136 @@ KPI cards & structured layout
 Dataset-aligned inputs
 Service & support risk toggles
 Business-level churn risk classification
+=======
+## Project Motivation
 
-Risk Categories
-🟢 Baseline Risk
-🟠 Moderate Risk
-🔴 High Risk
+Customer churn is a major revenue challenge for subscription businesses.
+The goal of this project is to:
+>>>>>>> fe6bcbc (Update README with concise project overview and business context)
 
-📁 Project Structure
+- Identify customers likely to churn
+- Understand key churn drivers
+- Present results in a usable decision system, not just notebooks
+
+This project was inspired by the IBM Watson Analytics churn use case.
+
+---
+
+## Dataset
+
+- Telco Customer Churn dataset
+- ~7,000 customer records
+- Binary target variable: Churn (Yes / No)
+
+### Feature Groups
+
+- Customer tenure and contract details
+- Billing and payment methods
+- Internet and service subscriptions
+- Customer support and security services
+
+---
+
+## Approach
+
+### 1. Exploratory Data Analysis
+- Churn distribution analysis
+- Contract type vs churn
+- Tenure vs churn trends
+- Identification of high-impact features
+
+### 2. Data Preprocessing
+- Missing value handling (TotalCharges)
+- Encoding categorical variables
+- Feature scaling
+- Handling class imbalance
+
+### 3. Feature Engineering
+- Average monthly spend
+- High-tenure indicator
+- Contract and service-based flags
+
+---
+
+## Models Used
+
+- Logistic Regression (baseline)
+- Random Forest
+- XGBoost (final model)
+
+XGBoost was selected for its ability to capture non-linear relationships and interactions between customer behavior and service usage.
+
+---
+
+## Model Evaluation
+
+Evaluation focused on metrics relevant to churn problems:
+
+- Accuracy
+- Precision
+- Recall (priority)
+- F1-Score
+- ROC-AUC
+- Confusion Matrix
+
+Recall was prioritized since failing to identify a churned customer is more costly than a false positive.
+
+---
+
+## Why Probabilities Look Conservative
+
+The model outputs calibrated churn probabilities, which tend to be conservative by design.
+
+In real churn systems:
+- Even 10–25% churn probability is considered risky
+- Decisions are rarely made using raw probabilities alone
+
+To address this, a business risk layer was added.
+
+---
+
+## Business Risk Layer
+
+A rule-based risk adjustment is applied on top of the ML probability using factors such as:
+
+- Very low tenure
+- Month-to-month contracts
+- Lack of tech support or online security
+- Paperless billing
+
+This converts model outputs into actionable churn risk levels, similar to real production systems.
+
+---
+
+## Streamlit Dashboard
+
+The project includes a production-style Streamlit application with:
+
+- Clean, enterprise-style UI
+- KPI summary cards
+- Dataset-aligned input controls
+- Auto-computed lifetime value
+- Business-adjusted churn risk classification
+
+### Risk Levels
+- Low Risk
+- Moderate Risk
+- High Risk
+
+---
+
+## Project Structure
+
 customer-churn-prediction/
 │
-├── app.py                  # Streamlit dashboard
+├── app.py                  # Streamlit application
 ├── models/
 │   ├── churn_model.pkl     # Trained XGBoost model
 │   └── scaler.pkl          # Feature scaler
 │
 ├── notebooks/
-│   ├── 01_eda.ipynb
-│   └── 02_model_training.ipynb
+│   ├── eda.ipynb
+│   └── model_training.ipynb
 │
 ├── data/
 │   └── raw/
@@ -109,13 +215,14 @@ customer-churn-prediction/
 ├── requirements.txt
 └── README.md
 
+---
 
-▶️ How to Run the Project
-1️⃣ Install Dependencies
+## How to Run
+
 pip install -r requirements.txt
-2️⃣ Run the Dashboard
 streamlit run app.py
 
+<<<<<<< HEAD
 🧪 Example High-Risk Scenario
 Tenure: 1 month
 Contract: Month-to-month
@@ -141,4 +248,28 @@ This project is built to reflect real-world ML systems, not just academic protot
 
 👤 Author
 Ragini Kalra
+=======
+---
+
+## Key Takeaways
+
+- Churn is driven more by service experience than price alone
+- Calibrated ML models require business interpretation
+- Deployment quality matters as much as model accuracy
+
+---
+
+## Future Improvements
+
+- SHAP-based feature explainability
+- Customer-specific churn explanations
+- Retention strategy recommendations
+- Cloud deployment
+
+---
+
+## Author
+
+Ragini Kalra  
+>>>>>>> fe6bcbc (Update README with concise project overview and business context)
 Machine Learning & Data Analytics Project
